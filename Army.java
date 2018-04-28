@@ -10,6 +10,7 @@ public Army(int size,String countryName)
 	countryName = null;
 	np = 0 ;
 }
+system.out.print("hi");
 public boolean addSoldier(Soldier s)
 {
 if(np<so.length)
@@ -23,15 +24,7 @@ else
 	return false;
 
 }
-public int countSoldiers(String r)
-{ 
-	 	int count=0; 
-	 	for(int i=0; i<np; i++)  	 	 	
-	 		if(so[i].getRank().equals(r)) 
-	 	 	 	count++; 
-	      
-	 	   return count; 
-}
+
 public Soldier getBravestSoldier()
 {
 	Soldier aword=so[0]; 
@@ -59,23 +52,5 @@ public Soldier[] getActiveSoldiers()
  	 
  	return Soldier; 
  	 
-} 
- public int splitSoldiers(Soldier[] highRank , Soldier[] lowRank)
- {
-	 { 
-		 	int j=0;
-		 	int k=0; 
-		 	for(int i=0;i<np;i++) 
-		 	{
-		 	 	if(so[i].getClass().equals("lowRank"))
-		 	 		lowRank[j++]=so[i]; 
-		 	 	else 
-		 	 		highRank[k++]=so[i]; 
-		 	 	 	 
-		 	 	} 	 
-		 	 
-		 	return k;  	 	 
-		 	 
-	}
  }
 }
